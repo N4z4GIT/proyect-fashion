@@ -1,0 +1,184 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  /*NOSOTROS: 
+  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;*/
+}
+
+/*NOSOTROS:
+div {
+  width: 200px;
+  padding: 40px;
+  margin: 10px;
+}*/
+/*PROFE--->*/body{
+  font-family: "Syne", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*VARIABLES*/
+:root {
+  --primary: #ffffff;
+  --secundary: #0c1519;
+}
+
+/*BASE STYLES*/
+body {
+  background-image: url(images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--secundary);
+  color: var(--primary);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+header,
+footer {
+  padding: 3.5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .logo h1,
+/*NOSOTROS: nav ul li*/
+/*PROFE--->*/ul li {
+  font-family: "syne", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+/* NOSOTROS: header nav ul li*/
+header ul li {
+  font-size: 0.875rem;
+  opacity: 0.56;
+}
+
+/* NOSOTROS: header nav ul li:*/
+header ul li:nth-child(1) {
+  opacity: 1;
+}
+
+/*CORRECCION: ANTES MAIN .TITLE{}*/
+/*profe--->*/main .title p{ /* nosotros: main title*/
+  font-family: "Ketsiyo", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+footer {
+  display: flex;
+  justify-tracks: center;
+  font-family: "syne", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+
+/*MOBILE STYLES*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /*o por fraccion en vez del repeat*/
+}
+
+main> .title, /*> agregado en codigo del profe*/
+/*main>* (* significa a cualquier hijo */
+main> .image { /*> agregado en codigo del profe*/
+  /*main>* (* significa a cualquier hijo */
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
+main .title p {
+  font-size: 3.75rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+/*header nav*/ header ul {
+  display: none;
+}
+
+/*TABLET STYLES*/
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    main> .title {
+        z-index: 1;
+    }
+
+    main> .title p {
+        font-size: 5.75rem;
+    }
+}
+
+/*LAPTOP STYLES*/
+@media screen and (min-width: 1000px){
+    header {
+        justify-content: space-between;
+    }
+
+    /*header nav*/header ul { 
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+   .grip {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 250px;
+   }
+
+   main/*>*/ .title {
+    grid-row: 1;
+    z-index: 1;
+}
+
+main .title p {
+  font-size: 7.75rem;
+}
+
+main .image{
+  grid-row: 1/span 2;
+}
+}
